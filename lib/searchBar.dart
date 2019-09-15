@@ -110,9 +110,7 @@ class _SearchBar extends State<SearchBar> {
                 suggestions: cities,
 
                 style: TextStyle(color: Colors.black, fontSize: 18,),
-                decoration: InputDecoration(
-
-                  contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                decoration: InputDecoration.collapsed(
                   hintText: 'City...',
                   hintStyle: TextStyle(color: Colors.black45, fontSize: 18 ),
                 ),
