@@ -36,7 +36,7 @@ class _SearchBar extends State<SearchBar> {
       children: <Widget>[
         Text(
           city,
-          style: TextStyle(fontSize: 16.0),
+          style: TextStyle(fontSize: 18.0),
         ),
       ],
     );
@@ -96,6 +96,7 @@ class _SearchBar extends State<SearchBar> {
     queryData = MediaQuery.of(context);
 
     return Card(
+         margin:EdgeInsets.all(15) ,
         elevation: 10,
         child: Padding(
           padding: EdgeInsets.all(10),
@@ -103,15 +104,17 @@ class _SearchBar extends State<SearchBar> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               searchTextField = AutoCompleteTextField<String>(
+
                 key: key,
                 clearOnSubmit: false,
                 suggestions: cities,
 
-                style: TextStyle(color: Colors.black, fontSize: queryData.size.aspectRatio*24.0,),
+                style: TextStyle(color: Colors.black, fontSize: 18,),
                 decoration: InputDecoration(
+
                   contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
-                  hintText: "Search Name",
-                  hintStyle: TextStyle(color: Colors.black),
+                  hintText: 'City...',
+                  hintStyle: TextStyle(color: Colors.black45, fontSize: 18 ),
                 ),
 
                 itemFilter: (item, query) {
@@ -140,3 +143,4 @@ class _SearchBar extends State<SearchBar> {
         ));
   }
 }
+
